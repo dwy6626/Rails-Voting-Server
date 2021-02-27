@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  namespace :api, defaults: { format: :json } do
+    post 'login' => 'authentication#login'
+    resources :issues, only: [:index, :show, :update]
+    resources :user, only: [:index, :create, :update]
+  end
 end
