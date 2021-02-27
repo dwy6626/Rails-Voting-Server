@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+1.upto(10) do |i|
+  User.create! id: i, email: "user#{i}@test.test", password: 'mypass'  
+end
+
+Issue.create! id: 1, title: 'Wuhan coronavirus is created by China', description: 'some descriptions'
