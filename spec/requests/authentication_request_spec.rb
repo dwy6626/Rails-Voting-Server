@@ -8,7 +8,7 @@ RSpec.describe 'authenticate', type: :request do
     it do
       subject
       expect(response.status).to eq(403)
-      expect(JSON.parse(response.body)).to eq('status' => 'error')
+      expect(JSON.parse(response.body)).to eq('status' => 'error', 'error' => 'invalid username or password')
     end
   end
 

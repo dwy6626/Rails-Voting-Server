@@ -8,14 +8,9 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
-class Issue < ApplicationRecord
-  has_many :votes, dependent: :destroy
-
-  def agree_count
-    votes.where(agree: true).count
-  end
-
-  def disagree_count
-    votes.where(agree: false).count
+FactoryBot.define do
+  factory :issue do
+    title { 'Wuhan coronavirus is created by China' }
+    description { 'some descriptions' }
   end
 end
