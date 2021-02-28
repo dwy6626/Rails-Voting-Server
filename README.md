@@ -8,7 +8,7 @@ The user can vote agree or disagree at any time.
 - Ruby 2.7.2
 - Database: SQLite
 - run `bundle install` to install gems and node modules
-- run `bundle exec rails db:migrate` to 
+- run `bundle exec rails db:migrate`
 - run `bundle exec rails db:seed` to seed users and issue
 
 ## Usage
