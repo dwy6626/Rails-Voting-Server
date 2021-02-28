@@ -50,7 +50,7 @@ RSpec.describe "Issues", type: :request do
     it do
       subject
       expect(response.status).to eq 404
-      expect(JSON.parse(response.body)).to eq('error' => 'resource not found')
+      expect(JSON.parse(response.body)).to eq('status' => 'error', 'error' => 'resource not found')
     end
   end
 
